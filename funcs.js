@@ -7,3 +7,5 @@ function isPalindrome(x) {
 function greet() {
   return "hello world!";
 };
+
+const sayHello = (name) => 'Hello' + ', ' + name;
