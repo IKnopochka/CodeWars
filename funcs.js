@@ -9,3 +9,5 @@ function greet() {
 };
 
 const sayHello = (name) => 'Hello' + ', ' + name;
+
+const booleanToString = b => b === true ? "true" : "false";
