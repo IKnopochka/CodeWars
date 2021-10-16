@@ -11,3 +11,8 @@ function greet() {
 const sayHello = (name) => 'Hello' + ', ' + name;
 
 const booleanToString = b => b === true ? "true" : "false";
+
+function take(arr, n) {
+  // Your code here
+  return arr.slice(0, n)
+}
