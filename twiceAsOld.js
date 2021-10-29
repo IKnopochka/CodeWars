@@ -1,0 +1,1 @@
+const twiceAsOld = (dadYearsOld, sonYearsOld) => dadYearsOld - sonYearsOld * 2 < 0 ? (dadYearsOld - sonYearsOld * 2) * -1 : dadYearsOld - sonYearsOld * 2;
