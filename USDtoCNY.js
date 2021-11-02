@@ -1,0 +1,1 @@
+const usdcny = usd => usd * 6.75 + " Chinese Yuan";
