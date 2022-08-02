@@ -8,3 +8,18 @@ const areaOrPerimeter = function(l , w) {
 function square(arr) {
   return arr*arr;
 };
+
+
+function humanReadable (seconds) {
+  let HH = Math.floor(seconds / 3600);
+  let MM = Math.floor((seconds - HH * 3600) / 60)
+  let SS = seconds - HH * 3600 - MM * 60
+  
+  HH = `${HH}`.length < 2 ? `0${HH}` : HH
+  MM = `${MM}`.length < 2 ? `0${MM}` : MM
+  SS = `${SS}`.length < 2 ? `0${SS}` : SS
+  
+  let result= `${HH}:${MM}:${SS}`
+  
+  return result;
+}
