@@ -14,3 +14,26 @@ function arrAdder(arr) {
   return result;
 }
 
+function rowSumOddNumbers(n) {
+
+  let startingNumber = 0; 
+  if (n > 2) {
+    startingNumber = n * (n - 1) + 1
+  } else if (n === 2) {
+    startingNumber = n + n - 1
+  } else {
+    startingNumber = 1
+  }
+  
+  let sum = startingNumber;
+  
+  if (sum === 1) {
+    return 1
+  } else {
+      for (let i = n; i > 1; i--) {
+        sum = sum + startingNumber + 2
+        startingNumber = startingNumber + 2
+      }
+    return sum
+  }
+}
