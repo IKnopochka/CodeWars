@@ -37,3 +37,7 @@ function rowSumOddNumbers(n) {
     return sum
   }
 }
+
+function reverseWords(str){
+  return str.split(' ').reverse().join(" "); // reverse those words
+}
