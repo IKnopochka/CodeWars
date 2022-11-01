@@ -72,3 +72,12 @@ function numberToPower(number, power){
   }
   return power === 0 ? 1 : x
 }
+
+function getSumOfDigits(integer) {
+  let sum = 0;
+  let digits = integer.toString();
+  for(let i = 0; i < digits.length; i++) {
+    sum += parseInt(digits[i]);
+  }
+  return sum;
+}
