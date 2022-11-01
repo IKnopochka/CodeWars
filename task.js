@@ -60,3 +60,15 @@ function declareWinner(fighter1, fighter2, firstAttacker) {
   const f2 = Math.ceil(fighter2.health / fighter1.damagePerAttack)
   return f1 < f2 ? fighter2.name : f2 < f1 ? fighter1.name : firstAttacker
 }
+
+
+function numberToPower(number, power){
+  console.info(Math.log2(1024));
+  // Code here
+  let x = number
+  for (let i = 1; i < power; i++) {
+    
+    x = x * number
+  }
+  return power === 0 ? 1 : x
+}
