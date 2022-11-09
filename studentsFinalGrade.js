@@ -5,3 +5,15 @@ function numOfOpenLockers(n){
 
     return Math.floor(Math.sqrt(n))
 }
+
+function isPerfect(n) {
+    // Your code here
+    let sum = 1
+        for (let i = 2; i * i <= n; i++) {
+            if (n % i === 0) {
+                sum += (i + n/i)
+            }  
+    }
+
+    return sum === n && n > 1
+}
