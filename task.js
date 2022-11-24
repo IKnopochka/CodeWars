@@ -94,3 +94,13 @@ function nthFibo(n) {
       : nthFibo(n - 1) + nthFibo(n - 2)
   
 }
+
+function isLeapYear(year) {
+    return  (year/4) === Math.round(year/4)
+        ? (year/100) === Math.round(year/100)
+            ? (year/400) === Math.round(year/400)
+                ? true
+                : false
+            : true
+        : false
+}
