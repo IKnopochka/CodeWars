@@ -81,3 +81,16 @@ function getSumOfDigits(integer) {
   }
   return sum;
 }
+
+
+function nthFibo(n) {
+  // Return the n-th number in the Fibonacci Sequence
+  // n = (n-1) + (n - 2)
+  
+  return n <= 1 
+    ? 0 
+    : n === 2 
+      ? 1  
+      : nthFibo(n - 1) + nthFibo(n - 2)
+  
+}
