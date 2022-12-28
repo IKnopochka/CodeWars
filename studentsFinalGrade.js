@@ -17,3 +17,10 @@ function isPerfect(n) {
 
     return sum === n && n > 1
 }
+
+function canEscape(walls) {
+    return walls.map((m, i) => m
+        .map(e => e - i - 1))
+        .flat()
+        .find(f => f < 0.9) < 1 ? false : true
+}
