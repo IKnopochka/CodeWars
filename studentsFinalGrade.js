@@ -24,3 +24,12 @@ function canEscape(walls) {
         .flat()
         .find(f => f < 0.9) < 1 ? false : true
 }
+
+function geo_mean(nums, arith_mean) {
+    const arithmeticSum = arith_mean * (nums.length + 1)
+    const missingNum = nums.reduce((num, el) => num - el, arithmeticSum)
+    nums.unshift(missingNum)
+    const geometricMult = nums.reduce((mult,el) => mult*el, 1)
+    const lngth = nums.length
+    return Math.pow(geometricMult, 1/lngth)
+}
