@@ -5,3 +5,7 @@ function nextPal(val) {
         ? (val + 1)
         : nextPal(val + 1)
 }
+
+function sumEvenNumbers(input) {
+    return input.reduce((sum, el) => el % 2 === 0 ? sum + el : sum, 0)
+}
