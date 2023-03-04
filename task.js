@@ -104,3 +104,7 @@ function isLeapYear(year) {
             : true
         : false
 }
+
+function makeMove(sticks) {
+    return sticks % 4
+}
