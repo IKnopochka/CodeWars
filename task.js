@@ -48,57 +48,57 @@ function removeExclamationMarks(s) {
 
 
 function feast(beast, dish) {
-  return beast[0] == dish[0] 
-    ? beast[beast.length - 1] == dish[dish.length - 1] 
-  ? true : false
-    : false
+    return beast[0] == dish[0]
+        ? beast[beast.length - 1] == dish[dish.length - 1]
+            ? true : false
+        : false
 //your function here
 }
 
 function declareWinner(fighter1, fighter2, firstAttacker) {
-  const f1 = Math.ceil(fighter1.health / fighter2.damagePerAttack)
-  const f2 = Math.ceil(fighter2.health / fighter1.damagePerAttack)
-  return f1 < f2 ? fighter2.name : f2 < f1 ? fighter1.name : firstAttacker
+    const f1 = Math.ceil(fighter1.health / fighter2.damagePerAttack)
+    const f2 = Math.ceil(fighter2.health / fighter1.damagePerAttack)
+    return f1 < f2 ? fighter2.name : f2 < f1 ? fighter1.name : firstAttacker
 }
 
 
-function numberToPower(number, power){
-  console.info(Math.log2(1024));
-  // Code here
-  let x = number
-  for (let i = 1; i < power; i++) {
-    
-    x = x * number
-  }
-  return power === 0 ? 1 : x
+function numberToPower(number, power) {
+    console.info(Math.log2(1024));
+    // Code here
+    let x = number
+    for (let i = 1; i < power; i++) {
+
+        x = x * number
+    }
+    return power === 0 ? 1 : x
 }
 
 function getSumOfDigits(integer) {
-  let sum = 0;
-  let digits = integer.toString();
-  for(let i = 0; i < digits.length; i++) {
-    sum += parseInt(digits[i]);
-  }
-  return sum;
+    let sum = 0;
+    let digits = integer.toString();
+    for (let i = 0; i < digits.length; i++) {
+        sum += parseInt(digits[i]);
+    }
+    return sum;
 }
 
 
 function nthFibo(n) {
-  // Return the n-th number in the Fibonacci Sequence
-  // n = (n-1) + (n - 2)
-  
-  return n <= 1 
-    ? 0 
-    : n === 2 
-      ? 1  
-      : nthFibo(n - 1) + nthFibo(n - 2)
-  
+    // Return the n-th number in the Fibonacci Sequence
+    // n = (n-1) + (n - 2)
+
+    return n <= 1
+        ? 0
+        : n === 2
+            ? 1
+            : nthFibo(n - 1) + nthFibo(n - 2)
+
 }
 
 function isLeapYear(year) {
-    return  (year/4) === Math.round(year/4)
-        ? (year/100) === Math.round(year/100)
-            ? (year/400) === Math.round(year/400)
+    return (year / 4) === Math.round(year / 4)
+        ? (year / 100) === Math.round(year / 100)
+            ? (year / 400) === Math.round(year / 400)
                 ? true
                 : false
             : true
@@ -107,4 +107,12 @@ function isLeapYear(year) {
 
 function makeMove(sticks) {
     return sticks % 4
+}
+
+function zipWith(fn, a0, a1) {
+    if (a0.length > a1.length) {
+        return a1.map( (a, i) => fn(a0[i], a1[i]))
+    } else {
+        return a0.map( (a, i) => fn(a0[i], a1[i]))
+    }
 }
